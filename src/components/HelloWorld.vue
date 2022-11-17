@@ -1,6 +1,5 @@
 <template>
   <div class="greetings">
-    <div>Mouse position is at: {{ x }}, {{ y }}</div>
     <div>{{ $t("message.title") }}</div>
   </div>
 </template>
@@ -15,11 +14,6 @@ export default {
       type: String,
       required: true,
     },
-  },
-  setup() {
-    const { x, y } = useMouse();
-
-    return { x, y }; // this lines causes the failing
   },
 };
 </script>
